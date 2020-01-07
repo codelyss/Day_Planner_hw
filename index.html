@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type="text/javascript" src="https://unpkg.com/moment"></script>
     <title>Day Planner</title>
 </head>
 
@@ -23,65 +24,66 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 9 AM - 5 PM -->
-        <div class="calendar_events">
-            <p>Daily Events</p>
+            <!-- 9 AM - 5 PM -->
+            <div class="calendar_events">
+                <p>Daily Events</p>
 
-            <div id="9AM" class="event_item">
-                <div class="ei_Title">9 AM</div>
-                <input type="text" class="hour_Agenda">
+                <div id="9AM" class="event_item">
+                    <div class="ei_Title">9 AM</div>
+                    <input type="text" id="txt9" class="hour_Agenda">
+                </div>
+
+                <div id="10AM" class="event_item">
+                    <div class="ei_Title">10 AM</div>
+                    <input type="text" id="txt10" class="hour_Agenda">
+                </div>
+
+                <div id="11AM" class="event_item">
+                    <div class="ei_Title">11 AM</div>
+                    <input type="text" id="txt11" class="hour_Agenda">
+                </div>
+
+                <div id="12PM" class="event_item">
+                    <div class="ei_Title">12 PM</div>
+                    <input type="text" id="txt12" class="hour_Agenda">
+                </div>
+
+                <div id="1PM" class="event_item">
+                    <div class="ei_Title">1 PM</div>
+                    <input type="text" id="txt13" class="hour_Agenda">
+                </div>
+
+                <div id="2PM" class="event_item">
+                    <div class="ei_Title">2 PM</div>
+                    <input type="text" id="txt14" class="hour_Agenda">
+                </div>
+
+                <div id="3PM" class="event_item">
+                    <div class="ei_Title">3 PM</div>
+                    <input type="text" id="txt15" class="hour_Agenda">
+                </div>
+
+                <div id="4PM" class="event_item">
+                    <div class="ei_Title">4 PM</div>
+                    <input type="text" id="txt16" class="hour_Agenda">
+                </div>
+
+                <div id="5PM" class="event_item">
+                    <div class="ei_Title">5 PM</div>
+                    <input type="text" id="txt17" class="hour_Agenda">
+                </div>
             </div>
 
-            <div id="10AM" class="event_item">
-                <div class="ei_Title">10 AM</div>
-                <input type="text" class="hour_Agenda">
+            <!-- Save button -->
+            <div>
+                <input type="button" class="button" onclick="SaveAgenda()" value="Save">
             </div>
-
-            <div id="11AM" class="event_item">
-                <div class="ei_Title">11 AM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-
-            <div id="12PM" class="event_item">
-                <div class="ei_Title">12 PM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-
-            <div id="1PM" class="event_item">
-                <div class="ei_Title">1 PM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-
-            <div id="2PM" class="event_item">
-                <div class="ei_Title">2 PM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-
-            <div id="3PM" class="event_item">
-                <div class="ei_Title">3 PM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-
-            <div id="4PM" class="event_item">
-                <div class="ei_Title">4 PM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-
-            <div id="5PM" class="event_item">
-                <div class="ei_Title">5 PM</div>
-                <input type="text" class="hour_Agenda">
-            </div>
-        </div>
-
-        <!-- Save button -->
-        <div>
-            <input type="button" class="button" onclick="SaveAgenda()" value="Save">
         </div>
 
     </div>
-    
+
+    <script type="text/javascript" src="assets/script.js"></script>
 
 </body>
 
