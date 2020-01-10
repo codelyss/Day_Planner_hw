@@ -28,7 +28,8 @@ SetTimeColors();
 
 // Display current date when page load
 function InitializeAgenda() {
-    datepicker.valueAsDate = new Date('2020-01-06');
+
+    datepicker.valueAsDate = new Date();
     LoadAgenda();
 }
 
@@ -37,9 +38,6 @@ function SetTimeColors () {
 
     var rightNow = moment(); 
     var rightNowNoMinutes = moment().startOf('hour');
-
-    //var rightNow = moment().startOf('day').add(13, 'h');
-    //var rightNowNoMinutes = moment().startOf('day').add(13, 'h');
 
     for (i = 0; i < containers.length; i++) {
         var hr = i + 9;
@@ -64,8 +62,8 @@ function SetTimeColors () {
 }
 
 function LoadAgenda() {
-    SetTimeColors();
 
+    SetTimeColors();
    
     for (i = 0; i < textboxes.length; i++) {
         textboxes[i].value = "";
@@ -84,12 +82,16 @@ function LoadAgenda() {
 }
 
 function SaveAgenda() {
+
     var inputValues = "";
+
     for (i = 0; i < textboxes.length; i++) {
         var hr = i + 9;
         var txt = textboxes[i].value;
         inputValues += datepicker.value + ":" + hr + ":" + txt + ";";
     }
+
+    // Remove last character from the string
     inputValues = inputValues.substring(0, inputValues.length - 1);
 
     localStorage.setItem(datepicker.value, inputValues);
